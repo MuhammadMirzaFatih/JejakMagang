@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import '../config/theme.dart';
 import '../models/lamaran_model.dart';
 import 'priority_badge.dart';
@@ -55,16 +56,25 @@ class ApplicationCard extends StatelessWidget {
                   ],
                   if (lamaran.isOverdue) ...[
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 3,
+                      ),
                       decoration: BoxDecoration(
                         color: AppTheme.overdue.withOpacity(0.15),
                         borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: AppTheme.overdue.withOpacity(0.4)),
+                        border: Border.all(
+                          color: AppTheme.overdue.withOpacity(0.4),
+                        ),
                       ),
                       child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.warning_amber_rounded, size: 13, color: AppTheme.overdue),
+                          Icon(
+                            Icons.warning_amber_rounded,
+                            size: 13,
+                            color: AppTheme.overdue,
+                          ),
                           SizedBox(width: 4),
                           Text(
                             'Lewat Tenggat',
@@ -104,7 +114,9 @@ class ApplicationCard extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
-                  color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                  color: isDark
+                      ? const Color(0xFF94A3B8)
+                      : const Color(0xFF64748B),
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
@@ -117,7 +129,9 @@ class ApplicationCard extends StatelessWidget {
                   Icon(
                     Icons.calendar_today_outlined,
                     size: 14,
-                    color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                    color: isDark
+                        ? const Color(0xFF94A3B8)
+                        : const Color(0xFF64748B),
                   ),
                   const SizedBox(width: 6),
                   Text(
@@ -127,7 +141,11 @@ class ApplicationCard extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: lamaran.isOverdue
                           ? AppTheme.overdue
-                          : (lamaran.isMendekatiTenggat ? AppTheme.statusMenunggu : (isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569))),
+                          : (lamaran.isMendekatiTenggat
+                                ? AppTheme.statusMenunggu
+                                : (isDark
+                                      ? const Color(0xFFCBD5E1)
+                                      : const Color(0xFF475569))),
                     ),
                   ),
                   if (lamaran.status == 'menunggu' && !lamaran.isOverdue) ...[
@@ -137,7 +155,9 @@ class ApplicationCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w600,
-                        color: lamaran.isMendekatiTenggat ? AppTheme.statusMenunggu : AppTheme.primary,
+                        color: lamaran.isMendekatiTenggat
+                            ? AppTheme.statusMenunggu
+                            : AppTheme.primary,
                       ),
                     ),
                   ],
@@ -157,7 +177,9 @@ class ApplicationCard extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w500,
-                          color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                          color: isDark
+                              ? const Color(0xFF94A3B8)
+                              : const Color(0xFF64748B),
                         ),
                       ),
                       Text(
@@ -167,7 +189,9 @@ class ApplicationCard extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: lamaran.persentaseBerkas == 100
                               ? AppTheme.statusLolos
-                              : (isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155)),
+                              : (isDark
+                                    ? const Color(0xFFCBD5E1)
+                                    : const Color(0xFF334155)),
                         ),
                       ),
                     ],
@@ -176,11 +200,17 @@ class ApplicationCard extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(4),
                     child: LinearProgressIndicator(
-                      value: lamaran.totalBerkas > 0 ? (lamaran.berkasSiap / lamaran.totalBerkas) : 0,
+                      value: lamaran.totalBerkas > 0
+                          ? (lamaran.berkasSiap / lamaran.totalBerkas)
+                          : 0,
                       minHeight: 6,
-                      backgroundColor: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                      backgroundColor: isDark
+                          ? const Color(0xFF334155)
+                          : const Color(0xFFE2E8F0),
                       valueColor: AlwaysStoppedAnimation<Color>(
-                        lamaran.persentaseBerkas == 100 ? AppTheme.statusLolos : AppTheme.primary,
+                        lamaran.persentaseBerkas == 100
+                            ? AppTheme.statusLolos
+                            : AppTheme.primary,
                       ),
                     ),
                   ),
@@ -193,4 +223,3 @@ class ApplicationCard extends StatelessWidget {
     );
   }
 }
-
