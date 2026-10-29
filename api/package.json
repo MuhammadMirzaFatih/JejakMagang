@@ -1,0 +1,33 @@
+{
+  "name": "jejakmagang-api",
+  "version": "1.0.0",
+  "description": "Backend API REST untuk JejakMagang menggunakan Express dan MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node src/scripts/testEndpoints.js",
+    "test-db": "node src/scripts/testDb.js",
+    "seed": "node src/scripts/runSeed.js"
+  },
+  "keywords": [
+    "jejakmagang",
+    "express",
+    "mysql",
+    "jwt",
+    "rest-api"
+  ],
+  "author": "JejakMagang Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
