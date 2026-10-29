@@ -1,4 +1,4 @@
-# JejakMagang 📱🚀
+# JejakMagang 
 
 **JejakMagang** adalah aplikasi mobile yang dirancang untuk membantu mahasiswa mencatat, mengelola, dan memantau seluruh proses lamaran magang dalam satu tempat yang rapi dan terorganisir.
 
@@ -6,7 +6,7 @@ Aplikasi ini mencakup pencatatan data perusahaan, posisi, tanggal lamar, tenggat
 
 ---
 
-## 🌟 13 Fitur Wajib yang Tersedia
+## 13 Fitur yang Tersedia
 
 1. **Daftar Akun dan Masuk (Autentikasi)**: Registrasi, masuk dengan JWT token, kata sandi dienkripsi dengan `bcrypt`, sesi tersimpan di `flutter_secure_storage`, dan data antar pengguna terisolasi penuh.
 2. **Tambah, Ubah, dan Hapus Lamaran (CRUD)**: Kelola nama perusahaan, posisi, tanggal lamar, tenggat, tautan lowongan, nama dan email kontak HRD, serta konfirmasi saat hapus.
@@ -24,7 +24,7 @@ Aplikasi ini mencakup pencatatan data perusahaan, posisi, tanggal lamar, tenggat
 
 ---
 
-## 🛠️ Tumpukan Teknologi (Tech Stack)
+## Tech Stack yang Digunakan
 
 | Bagian | Teknologi | Keterangan |
 |---|---|---|
@@ -43,7 +43,7 @@ Aplikasi ini mencakup pencatatan data perusahaan, posisi, tanggal lamar, tenggat
 
 ---
 
-## 📁 Struktur Repositori
+## Struktur Repositori
 
 ```text
 JejakMagang/
@@ -84,7 +84,7 @@ JejakMagang/
 
 ---
 
-## 🚀 Panduan Menjalankan dari Nol
+## Panduan Menjalankan dari Nol
 
 ### 1. Prasyarat
 - **Node.js** v18+ atau v20+
